@@ -20,21 +20,21 @@
     fetch(BASE_URL)
     	.then(statusCheck)
     	.then(res => res.json())
+      // .then(console.log)
     	// .then(res => res.text())
-    	.then(processData)
+    	.then(addActivity)
       // TODO: change this to something useful
-    	.catch(console.log);
+    	.catch(console.error);
   }
 
-  function processData(res) {
+  function addActivity(obj) {
     // TODO: process json somehow
-    let imgs = res.split('\n');
-    let div = id('pictures');
-    for (let i = 0; i < imgs.length; i++) {
-      let pic = document.createElement('img');
-      pic.src = imgs[i];
-      div.appendChild(pic);
-    }
+    let activity = obj.activity;
+    console.log(obj.activity);
+    // console.log("activity = " + activity);
+    let p = document.createElement('p');
+    p.textContent = activity;
+    document.getElementById("activity").appendChild(p);
   }
 
   async function statusCheck(res) {
