@@ -17,6 +17,7 @@
   }
 
   function getActivity() {
+    document.getElementById("activity").innerHTML = "";
     fetch(BASE_URL)
     	.then(statusCheck)
     	.then(res => res.json())
