@@ -1,12 +1,12 @@
 /**
-* Bella Rivera
-* April 4, 2022
-* CSE154 Section AH
-*
-* This is the JavaScript for my CP2 website. It contains all of the functionality.
-* It sets up the boards, flips the cards, counts the matches, and triggers
-* the celebration when all the matches have been found.
-*/
+  * Bella Rivera
+  * April 4, 2022
+  * CSE154 Section AH
+  *
+  * This is the JavaScript for my CP2 website. It contains all of the functionality.
+  * It sets up the boards, flips the cards, counts the matches, and triggers
+  * the celebration when all the matches have been found.
+  */
 "use strict";
 (function() {
   window.addEventListener("load", init);
@@ -31,23 +31,19 @@
     }
     document.getElementById("activity").innerHTML = "";
     document.getElementById("activity").classList.remove("hidden");
-    console.log(url);
     fetch(url)
-    	.then(statusCheck)
-    	.then(res => res.json())
-    	.then(addActivity)
+      .then(statusCheck)
+      .then(res => res.json())
+      .then(addActivity)
       // TODO: change this to something useful
-    	.catch(console.error);
+      .catch(handleError);
   }
 
   function addActivity(obj) {
-    // TODO: process json somehow
     let activity = obj.activity;
-    console.log(obj.activity);
-    // console.log("activity = " + activity);
-    let p = document.createElement('p');
-    p.textContent = activity;
-    document.getElementById("activity").appendChild(p);
+    let para = document.createElement('p');
+    para.textContent = activity;
+    document.getElementById("activity").appendChild(para);
   }
 
   async function statusCheck(res) {
@@ -57,5 +53,10 @@
     return res;
   }
 
+  function handleError(err) {
+    let para = document.createElement('p');
+    para.textContent = err;
+    document.getElementById("activity").appendChild(para);
+  }
 
- })();
+})();

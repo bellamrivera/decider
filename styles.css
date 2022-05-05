@@ -1,9 +1,11 @@
 body {
   text-align: center;
-  background-image: url(background.png);
+  /*https://digitalsynopsis.com/wp-content/uploads/2017/07/
+  beautiful-color-ui-gradients-backgrounds-roseanna.png*/
+  background-image: url("background.png");
   background-size: cover;
   background-repeat: none;
-  font-family: 'Koulen', Arial, Helvetica, sans-serif;
+  font-family: 'Koulen', 'Arial', 'Helvetica', sans-serif;
   color: #575757;
 }
 
@@ -37,7 +39,7 @@ p {
   margin-right: 100px;
 }
 
-main  > section + section {
+main > section + section {
   display: flex;
   flex-direction: column;
   align-items: center;
