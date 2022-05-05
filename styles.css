@@ -1,7 +1,7 @@
 body {
   text-align: center;
-  /*https://digitalsynopsis.com/wp-content/uploads/2017/07/
-  beautiful-color-ui-gradients-backgrounds-roseanna.png*/
+  /* https://digitalsynopsis.com/wp-content/uploads/2017/07/
+  beautiful-color-ui-gradients-backgrounds-roseanna.png */
   background-image: url("background.png");
   background-size: cover;
   background-repeat: none;
@@ -72,46 +72,6 @@ footer p {
 .hidden {
   display: none;
 }
-
-/* #education {
-  background-color: #DFD2FF;
-}
-
-#recreational {
-  background-color: #D2F0FF;
-}
-
-#social {
-  background-color: #D2FFDC;
-}
-
-#diy {
-  background-color: #FFFABF;
-}
-
-#charity {
-  background-color: #FFD4F5;
-}
-
-#cooking {
-  background-color: #DFD2FF;
-}
-
-#relaxation {
-  background-color: #D2F0FF;
-}
-
-#music {
-  background-color: #D2FFDC;
-}
-
-#busywork {
-  background-color: #FFFABF;
-}
-
-#random {
-  background-color: #FFD4F5;
-} */
 
 footer {
   position: fixed;

@@ -1,12 +1,12 @@
 /**
-  * Bella Rivera
-  * April 4, 2022
-  * CSE154 Section AH
-  *
-  * This is the JavaScript for my CP2 website. It contains all of the functionality.
-  * It sets up the boards, flips the cards, counts the matches, and triggers
-  * the celebration when all the matches have been found.
-  */
+ * Bella Rivera
+ * April 4, 2022
+ * CSE154 Section AH
+ *
+ * This is the JavaScript for my CP2 website. It contains all of the functionality.
+ * It sets up the boards, flips the cards, counts the matches, and triggers
+ * the celebration when all the matches have been found.
+ */
 "use strict";
 (function() {
   window.addEventListener("load", init);
@@ -35,7 +35,6 @@
       .then(statusCheck)
       .then(res => res.json())
       .then(addActivity)
-      // TODO: change this to something useful
       .catch(handleError);
   }
 
