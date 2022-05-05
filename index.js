@@ -13,16 +13,26 @@
   const BASE_URL = "http://www.boredapi.com/api/activity/";
 
   function init() {
-    document.getElementById("activity-button").addEventListener('click', getActivity);
+    let btns = document.getElementsByClassName("activity-btn");
+
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', getActivity);
+    }
   }
 
   function getActivity() {
+    let btnId = this.id;
+    let url;
+    if (btnId === "random") {
+      url = BASE_URL;
+    } else {
+      url = BASE_URL + "?type=" + btnId;
+    }
     document.getElementById("activity").innerHTML = "";
-    fetch(BASE_URL)
+    console.log(url);
+    fetch(url)
     	.then(statusCheck)
     	.then(res => res.json())
-      // .then(console.log)
-    	// .then(res => res.text())
     	.then(addActivity)
       // TODO: change this to something useful
     	.catch(console.error);
