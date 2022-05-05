@@ -1,8 +1,118 @@
 body {
   text-align: center;
+  background-image: url(background.png);
+  background-size: cover;
+  background-repeat: none;
+  font-family: 'Koulen', Arial, Helvetica, sans-serif;
+  color: #575757;
 }
+
+h1 {
+  font-size: 64px;
+  color: white;
+  text-shadow: 7px 7px 2px #888888;
+  margin: 10px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+header p {
+  width: 57%;
+  font-size: 20px;
+}
+
+p {
+  font-size: 24px;
+}
+
+#button-section {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+main  > section + section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activity {
+  width: 50%;
+  margin-top: 100px;
+  text-align: center;
+  border: 4px solid white;
+  border-radius: 5%;
+}
+
+button {
+  color: #575757;
+  background-color: white;
+  box-shadow: 5px 5px #888888;
+  font-size: 17px;
+  font-family: 'Koulen', Arial, Helvetica, sans-serif;
+  border-radius: 10%;
+  height: 50px;
+  width: 100px;
+  border: none;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* #education {
+  background-color: #DFD2FF;
+}
+
+#recreational {
+  background-color: #D2F0FF;
+}
+
+#social {
+  background-color: #D2FFDC;
+}
+
+#diy {
+  background-color: #FFFABF;
+}
+
+#charity {
+  background-color: #FFD4F5;
+}
+
+#cooking {
+  background-color: #DFD2FF;
+}
+
+#relaxation {
+  background-color: #D2F0FF;
+}
+
+#music {
+  background-color: #D2FFDC;
+}
+
+#busywork {
+  background-color: #FFFABF;
+}
+
+#random {
+  background-color: #FFD4F5;
+} */
 
 footer {
   position: fixed;
   width: 100%;
+  bottom: 0;
 }

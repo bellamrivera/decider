@@ -14,6 +14,7 @@
 
   function init() {
     let btns = document.getElementsByClassName("activity-btn");
+    document.getElementById("activity").classList.add("hidden");
 
     for (let i = 0; i < btns.length; i++) {
       btns[i].addEventListener('click', getActivity);
@@ -29,6 +30,7 @@
       url = BASE_URL + "?type=" + btnId;
     }
     document.getElementById("activity").innerHTML = "";
+    document.getElementById("activity").classList.remove("hidden");
     console.log(url);
     fetch(url)
     	.then(statusCheck)

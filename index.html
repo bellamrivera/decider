@@ -5,18 +5,26 @@
 <html>
   <head>
     <title>Activity Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Coda+Caption&family=Koulen&family=Share+Tech+Mono&family=Titillium+Web:wght@200;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
   </head>
 
   <body>
     <header>
-      <h1>Activity Decider</h1>
+      <h1>Activity Decider!</h1>
+      <p>
+        Are you bored and indecisive? Want some thing to do but can't think
+        of anything? Well, look no further! Introducing the activity picker.
+        Simply select the category that interests you — or random if you're feeling
+        particuluarly indecisive today — and the activity decider will give you
+        something to do!
+      </p>
     </header>
     <main>
-      <p>Pick a category to generate an activity for you to do:</p>
+      <p>Pick a category:</p>
 
-      <div>
+      <section id="button-section">
         <button class="activity-btn" id="education">Education</button>
         <button class="activity-btn" id="recreational">Recreational</button>
         <button class="activity-btn" id="social">Social</button>
@@ -27,9 +35,12 @@
         <button class="activity-btn" id="music">Music</button>
         <button class="activity-btn" id="busywork">Busywork</button>
         <button class="activity-btn" id="random">Random</button>
-      </div>
+      </section>
 
-      <div id="activity"></div>
+      <section>
+        <div class="activity" id="activity"></div>
+      </section>
+
     </main>
     <footer>
       <p>
