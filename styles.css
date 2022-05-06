@@ -1,11 +1,23 @@
+/*
+  Bella Rivera
+  May 5, 2022
+  CSE154 Section AH
+
+  This is the styling page for my CP3 website. This gives the webpage a coherent
+  theme, makes the buttons look nicer, and defines how the chosen activity will
+  be displayed.
+*/
+
 body {
-  text-align: center;
   /* https://digitalsynopsis.com/wp-content/uploads/2017/07/
   beautiful-color-ui-gradients-backgrounds-roseanna.png */
   background-image: url("background.png");
   background-size: cover;
   background-repeat: none;
-  font-family: 'Koulen', 'Arial', 'Helvetica', sans-serif;
+  font-family: 'Koulen', "Arial", "Helvetica", sans-serif;
+}
+
+body, button {
   color: #575757;
 }
 
@@ -16,10 +28,16 @@ h1 {
   margin: 10px;
 }
 
-header {
+main > section + section, #button-section, header {
   display: flex;
+}
+
+main > section + section, header {
   flex-direction: column;
   align-items: center;
+}
+
+header {
   margin-bottom: 40px;
 }
 
@@ -33,28 +51,23 @@ p {
 }
 
 #button-section {
-  display: flex;
   justify-content: space-around;
   margin-left: 100px;
   margin-right: 100px;
 }
 
-main > section + section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.activity, body {
+  text-align: center;
 }
 
 .activity {
   width: 50%;
   margin-top: 100px;
-  text-align: center;
   border: 4px solid white;
   border-radius: 5%;
 }
 
 button {
-  color: #575757;
   background-color: white;
   box-shadow: 5px 5px #888888;
   font-size: 17px;

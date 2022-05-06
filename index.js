@@ -1,17 +1,22 @@
 /**
  * Bella Rivera
- * April 4, 2022
+ * May 5, 2022
  * CSE154 Section AH
  *
- * This is the JavaScript for my CP2 website. It contains all of the functionality.
- * It sets up the boards, flips the cards, counts the matches, and triggers
- * the celebration when all the matches have been found.
+ * This is the JavaScript for my CP3 website. It contains all of the functionality.
+ * It makes sure that the buttons correspond to the right activity suggestions, and
+ * generates activities usingthe Bored API.
  */
+
 "use strict";
 (function() {
   window.addEventListener("load", init);
   const BASE_URL = "http://www.boredapi.com/api/activity/";
 
+  /**
+   * Sets up the wepage. Initializes all buttons so that they can be clicked,
+   * starts activity box as hidden so that the user doesn't see the white border
+   */
   function init() {
     let btns = document.getElementsByClassName("activity-btn");
     document.getElementById("activity").classList.add("hidden");
@@ -21,6 +26,10 @@
     }
   }
 
+  /**
+   * Based on the button that's clicked, get an activity from the API.
+   * Check for and handle errors, process the data.
+   */
   function getActivity() {
     let btnId = this.id;
     let url;
@@ -38,6 +47,10 @@
       .catch(handleError);
   }
 
+  /**
+   * Create a paragraph element and use it to display the activity on the
+   * webpage.
+   */
   function addActivity(obj) {
     let activity = obj.activity;
     let para = document.createElement('p');
@@ -45,6 +58,9 @@
     document.getElementById("activity").appendChild(para);
   }
 
+  /**
+   * Checks the success of the fetch call
+   */
   async function statusCheck(res) {
     if (!res.ok) {
       throw new Error(await res.text());
@@ -52,6 +68,10 @@
     return res;
   }
 
+  /**
+   * If there is a problem during the fetch call, display the error on the
+   * webpage to inform the user
+   */
   function handleError(err) {
     let para = document.createElement('p');
     para.textContent = err;
