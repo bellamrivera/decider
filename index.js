@@ -50,6 +50,7 @@
   /**
    * Create a paragraph element and use it to display the activity on the
    * webpage.
+   * @param {object} obj The JSON object that we get from the fetch call
    */
   function addActivity(obj) {
     let activity = obj.activity;
@@ -60,6 +61,7 @@
 
   /**
    * Checks the success of the fetch call
+   * @param {object} res status for the fetch call (200 = ok, 404 = not found, etc.)
    */
   async function statusCheck(res) {
     if (!res.ok) {
@@ -71,6 +73,7 @@
   /**
    * If there is a problem during the fetch call, display the error on the
    * webpage to inform the user
+   * @param {object} err The error that occurred when fetching
    */
   function handleError(err) {
     let para = document.createElement('p');
