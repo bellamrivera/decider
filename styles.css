@@ -58,7 +58,8 @@ p {
 }
 
 #button-section {
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-left: 100px;
   margin-right: 100px;
 }
@@ -83,6 +84,7 @@ button {
   height: 50px;
   width: 100px;
   border: none;
+  margin: 10px;
 }
 
 footer p {
