@@ -17,6 +17,10 @@ body {
   font-family: 'Koulen', sans-serif;
 }
 
+#wrapper {
+  flex: 1;
+}
+
 body, button {
   color: #575757;
 }
